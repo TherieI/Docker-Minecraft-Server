@@ -1,0 +1,1 @@
+scoreboard players set #Delay idle_delayTimer 0

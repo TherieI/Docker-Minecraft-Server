@@ -1,0 +1,16 @@
+services:
+  mc:
+    image: itzg/minecraft-server
+    stdin_open: true
+    tty: true
+    ports:
+      - "42069:25565"
+    environment:
+      EULA: "TRUE"
+      VERSION: "1.21.1"
+    volumes:
+      - ./data:/data
+    DATAPACKS:
+      - /datapacks/idle-timeout-datapack
+    RCON_CMDS_LAST_DISCONNECT: |-
+      

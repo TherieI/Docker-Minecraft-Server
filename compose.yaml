@@ -12,5 +12,7 @@ services:
       - ./data:/data
     DATAPACKS:
       - /datapacks/idle-timeout-datapack
+    RCON_CMDS_STARTUP: |-
+      function idle_timeout:init
     RCON_CMDS_LAST_DISCONNECT: |-
-      
+      function idle_timeout:lastplayerleave

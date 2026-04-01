@@ -5,20 +5,27 @@ services:
     tty: true
     ports:
       - "25565:25565"
+    volumes:
+      - "./data:/data"
+      - "./datapacks:/datapacks"
+      - "./modpacks:/modpacks:ro"
     environment:
+      MOTD: "Journey into the wilderness..."
+      ICON: "https://www.animesenpai.net/wp-content/uploads/2023/12/GBX93m_XIAACW6r.jpg.webp"
+      # VERSION & JVM FLAGS
       EULA: "TRUE"
       TYPE: "NEOFORGE"
       VERSION: "1.21.1"
       MEMORY: "4096M"
       USE_MEOWICE_FLAGS: "true"
+      # CONTENT
       DATAPACKS: "/datapacks/idle_timeout"
-      RCON_PASSWORD: "poop"
+      CF_SERVER_MOD: "/modpacks/NEOFORGE_1.21.1_EXAMPLE.zip"
+      # PERMISSIONS & ADMIN
+      RCON_PASSWORD: ${MC_RCON_PASSWORD}
       OPS: "Theriel"
       FUNCTION_PERMISSION_LEVEL: 4
       RCON_CMDS_STARTUP: |-
         function idle_timeout:init
       RCON_CMDS_LAST_DISCONNECT: |-
         function idle_timeout:lastplayerleave
-    volumes:
-      - "./data:/data"
-      - "./datapacks:/datapacks"

@@ -13,6 +13,6 @@ When the server starts `RCON_CMDS_STARTUP` (defined in `compose.yaml`) runs the 
 If the datapack breaks for any reason, check the wiki to see if minecraft released any major changes to the datapack system (namespaces, command names, etc) and update accordingly.
 
 ## Customization
-To change the duration the server will persist once everyone has logged out, open `data/idle_timeout/function/tick.mcfunction` and replace every instance of `12000..` with the your desired timeout value. This value should be the number of ticks before the server ends.
+To change the duration the server will persist once everyone has logged out, open `data/idle_timeout/function/tick.mcfunction` and replace every instance of `12000..` with your desired timeout value. This value should be the number of ticks before the server ends.
 A minecraft tick is 1/20 of a second, so the conversion for minutes would be: (X minutes) * 20 * 60 = X * 1200.
 

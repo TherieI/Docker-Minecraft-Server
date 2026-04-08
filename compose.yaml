@@ -8,19 +8,23 @@ services:
     volumes:
       - "./data:/data"
       - "./datapacks:/datapacks"
-      - "./modpacks:/modpacks:ro"
+      - "./modpacks/server:/modpacks:ro"
     environment:
       MOTD: "Journey into the wilderness..."
       ICON: "https://www.animesenpai.net/wp-content/uploads/2023/12/GBX93m_XIAACW6r.jpg.webp"
+      LEVEL: "diddycraft"
+      SEED: -96974983
+      ALLOW_FLIGHT: "TRUE"
       # VERSION & JVM FLAGS
       EULA: "TRUE"
-      TYPE: "NEOFORGE"
-      VERSION: "1.21.1"
+      MODPACK_PLATFORM: "AUTO_CURSEFORGE"
+      CF_API_KEY: ${CF_API_KEY}
       MEMORY: "4096M"
       USE_MEOWICE_FLAGS: "true"
       # CONTENT
       DATAPACKS: "/datapacks/idle_timeout"
-      CF_SERVER_MOD: "/modpacks/NEOFORGE_1.21.1_EXAMPLE.zip"
+      CF_MODPACK_ZIP: "/modpacks/Revelations_1.21.1_NF_SERVER-v1.0.zip"
+      CF_SLUG: "custom"
       # PERMISSIONS & ADMIN
       RCON_PASSWORD: ${MC_RCON_PASSWORD}
       OPS: "Theriel"

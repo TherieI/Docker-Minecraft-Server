@@ -12,7 +12,7 @@ services:
     environment:
       MOTD: "Journey into the wilderness..."
       ICON: "https://www.animesenpai.net/wp-content/uploads/2023/12/GBX93m_XIAACW6r.jpg.webp"
-      LEVEL: "diddycraft"
+      LEVEL: "worlds/survival"
       SEED: -96974983
       ALLOW_FLIGHT: "TRUE"
       # VERSION & JVM FLAGS
@@ -27,7 +27,7 @@ services:
       CF_SLUG: "custom"
       # PERMISSIONS & ADMIN
       RCON_PASSWORD: ${MC_RCON_PASSWORD}
-      OPS: "Theriel"
+      #OPS: 
       FUNCTION_PERMISSION_LEVEL: 4
       RCON_CMDS_STARTUP: |-
         function idle_timeout:init

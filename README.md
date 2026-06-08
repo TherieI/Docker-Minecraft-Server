@@ -1,10 +1,12 @@
 # The Real's Hosting Guide
 
 - Clone the repo
-- edit `compose.yaml` if needed
-- create a file `.env` for any environment variables
+- Update essential variables in `.env`
+    - Agree to EULA
+    - Add Curseforge API key, RCON password, and the name of the server's modpack.zip file
+- fine tune any settings in `compose.yaml` if desired
 - run `docker compose up` or (if you want detached) `docker compose up -d`
-- https://docker-minecraft-server.readthedocs.io/en/latest/
 
 ## Useful Resources
+- https://docker-minecraft-server.readthedocs.io/en/latest/
 - https://www.decomposerize.com
